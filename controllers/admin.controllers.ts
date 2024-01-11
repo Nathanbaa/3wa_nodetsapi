@@ -2,7 +2,16 @@ import { NextFunction, Request, Response } from "express";
 import { createRestaurantInputs } from "../dto";
 import { Restaurant } from "../models";
 import { generateSalt, hashPassword } from "../utility";
-import { CastError } from "mongoose";
+
+export const findRestaurant = async (
+  id: string | undefined,
+  email?: string
+) => {
+  if (email) {
+    return Restaurant.findOne({ email }).exec(); // exec pour transformer en promess
+  }
+  return Restaurant.findById(id).exec();
+};
 
 export const createRestaurant = async (
   req: Request,
