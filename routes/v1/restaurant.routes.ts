@@ -1,5 +1,7 @@
 import express from "express";
 import {
+  createFood,
+  getFoods,
   getProfile,
   restaurantLogin,
   updateProfile,
@@ -15,5 +17,8 @@ router.use(authenticate);
 router.get("/profile", getProfile);
 router.patch("/profile", updateProfile);
 router.patch("/service", updateServiceAvailable);
+
+router.post("/food", createFood);
+router.get("/foods", getFoods);
 
 export { router as RestaurantRoute };
