@@ -4,8 +4,8 @@ import {
   restaurantLogin,
   updateProfile,
   updateServiceAvailable,
-} from "../controllers";
-import { authenticate } from "../middlewares";
+} from "../../controllers/v1";
+import { authenticate } from "../../middlewares";
 
 const router = express.Router();
 

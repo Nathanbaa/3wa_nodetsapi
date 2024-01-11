@@ -20,3 +20,12 @@ export interface restaurantPayload {
   name: string;
   foodTypes: [string];
 }
+
+export interface EditRestaurantInputs {
+  name: { type: String; required: true };
+  ownerName: { type: String; required: true };
+  foodTypes: { type: [String]; default: [] };
+  postalcode: { type: String; required: true };
+  address: { type: String; required: true };
+  phone: { type: String; required: true };
+}

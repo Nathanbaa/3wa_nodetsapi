@@ -3,7 +3,7 @@ import {
   createRestaurant,
   getRestaurantById,
   getRestaurants,
-} from "../controllers";
+} from "../../controllers/v1";
 
 const router = express.Router();
 
