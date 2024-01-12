@@ -38,4 +38,4 @@ const FoodSchema = new Schema<FoodDoc>(
 
 const Food = mongoose.model<FoodDoc>("food", FoodSchema);
 
-export { Food };
+export { Food, FoodDoc };
